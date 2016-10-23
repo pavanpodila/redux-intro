@@ -1,12 +1,30 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-export class Message extends React.Component {
+function View({message}) {
 
-    static defaultProps = {
-        message: []
-    };
+    const emptyMessage = (<p className="text-muted">No Message Selected</p>);
 
-    render() {
-        return (<h2>Message</h2>)
-    }
+    return (message) ? (
+        <div>
+            <small>
+                <strong>From</strong>: {message.from}
+            </small>
+            <div>
+                <strong>Subject</strong>: {message.title}
+            </div>
+            <hr/>
+            <p>{message.body}</p>
+        </div>
+    ) : emptyMessage;
 }
+
+
+export const Message = connect(mapStateToProps)(View);
+
+function mapStateToProps({mailbox}) {
+    return {
+        message: mailbox.selection.message
+    };
+}
+
