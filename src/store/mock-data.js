@@ -4,7 +4,7 @@ export const mockMessages = {
             id: '1',
             from: 'React',
             title: 'Hello, hope you like React!',
-            body: 'Facebook has made it very enjoyable to build React Applications. The ecosystem is great. Hope' +
+            body: 'Facebook has made it very enjoyable to build React Applications. The ecosystem is great. Hope ' +
             'you like it!'
         },
         {
@@ -32,7 +32,7 @@ export const mockMessages = {
     trash: [
         {
             id: '1',
-            from: 'Prince of Nigeria',
+            from: 'Prince of East',
             title: "I'd like to give you a Million Dollars!",
             body: "I'd like to give you a Million Dollars!",
         },
