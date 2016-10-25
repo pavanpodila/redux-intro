@@ -9,7 +9,7 @@ import {Provider} from 'react-redux';
 import {reducer} from "./store/index";
 import {composeWithDevTools} from 'redux-devtools-extension';
 
-const store = window.store = createStore(reducer, composeWithDevTools());
+const store = createStore(reducer, composeWithDevTools());
 
 const root = (
     <Provider store={store}>
